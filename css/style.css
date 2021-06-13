@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ddd;
+}
+
+form {
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+/**/
+.form-control {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+}
+
+.form-control input {
+  border: none;
+  border-bottom: 2px solid #333;
+  font-family: inherit;
+  font-size: 18px;
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  border-bottom-color: rgb(88, 240, 96);
+  outline: none;
+}
+
+.form-control label {
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(88, 240, 96);
+  transform: translateY(-30px);
+}
+
+input[type="button"] {
+  border: none;
+  color: #fff;
+  background-color: dodgerblue;
+}
+
+input[type="button"]:hover {
+  background-color: rgb(7, 86, 165);
+  transform: scale(1.1);
+}
+
+.form-control label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  min-width: 5px; /* In cases where we add more than one word in a label e.g Confirm Password */
+}
+
+p {
+  color: #333;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  color: #111;
+}
